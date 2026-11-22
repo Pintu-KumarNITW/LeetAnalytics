@@ -1,5 +1,4 @@
-## Overview
-A LeetCode stats tracker built with HTML, CSS, and JavaScript. Enter a username to see problems solved by difficulty (Easy, Medium, Hard) and submission statistics in a clean, responsive dashboard
+
 <div align="center">
 
 # 📊 LeetAnalytics
