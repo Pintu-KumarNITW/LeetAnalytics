@@ -1,142 +1,161 @@
+<div align="center">
+
 # LeetAnalytics
 
-A responsive web application that visualizes a LeetCode user's problem-solving progress and submission statistics, built with vanilla JavaScript and the LeetCode GraphQL API.
+**Track your LeetCode progress at a glance.**
 
-**Live Demo:** [https://pintu-kumarnitw.github.io/LeetAnalytics/](https://pintu-kumarnitw.github.io/LeetAnalytics/)
-**Source Code:** [https://github.com/pintu-kumarnitw/LeetAnalytics](https://github.com/pintu-kumarnitw/LeetAnalytics)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge)](https://pintu-kumarnitw.github.io/LeetAnalytics/)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
-![GraphQL](https://img.shields.io/badge/GraphQL-E10098?style=flat&logo=graphql&logoColor=white)
-![GitHub Pages](https://img.shields.io/badge/Deployed%20on-GitHub%20Pages-222?style=flat&logo=github&logoColor=white)
+[Live Demo](https://pintu-kumarnitw.github.io/LeetAnalytics/) · [Report Bug](https://github.com/pintu-kumarnitw/LeetAnalytics/issues) · [Request Feature](https://github.com/pintu-kumarnitw/LeetAnalytics/issues)
+
+</div>
 
 ---
 
 ## Table of Contents
 
-1. [Overview](#overview)
-2. [Features](#features)
-3. [Tech Stack](#tech-stack)
-4. [Architecture](#architecture)
-5. [Technical Highlights](#technical-highlights)
-6. [Challenges and Solutions](#challenges-and-solutions)
-7. [Getting Started](#getting-started)
-8. [Proxy Setup](#proxy-setup)
-9. [Project Structure](#project-structure)
-10. [Future Improvements](#future-improvements)
-11. [Author](#author)
+- [About the Project](#about-the-project)
+- [Live Demo](#live-demo)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+- [Proxy Setup](#proxy-setup)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [How It Works](#how-it-works)
+- [Roadmap](#roadmap)
+- [Contributing](#contributing)
+- [License](#license)
+- [Author](#author)
 
 ---
 
-## Overview
+## About the Project
 
-Tracking coding practice across Easy, Medium and Hard problems usually means scrolling through a profile page. LeetAnalytics condenses this into a single dashboard: enter a username and instantly see how many problems have been solved out of the total, along with submission counts and acceptance rates per difficulty.
+LeetAnalytics is a lightweight web app that shows a user's LeetCode progress. Enter any public LeetCode username to see solved questions by difficulty and detailed submission statistics, all in one clean dashboard.
 
-The project demonstrates working with a third-party GraphQL API, asynchronous JavaScript, DOM manipulation, and handling real-world browser constraints such as CORS.
+## Live Demo
+
+**https://pintu-kumarnitw.github.io/LeetAnalytics/**
+
+> **Note:** The app uses a CORS proxy. Before searching, enable it once (see [Proxy Setup](#proxy-setup)).
 
 ## Features
 
 - Search any public LeetCode profile by username
-- Circular progress indicators for Easy, Medium and Hard problems (solved / total)
-- Submission statistics: overall, easy, medium and hard submissions
-- Acceptance rate calculated for each difficulty level
-- Username validation using regular expressions
-- Graceful handling of invalid usernames, missing users and network failures
-- Loading state on the search button to prevent duplicate requests
-- Responsive layout for desktop and mobile
+- Circular progress rings for Easy, Medium and Hard problems (solved / total)
+- Submission stat cards: overall, easy, medium, hard submissions
+- Acceptance rate for each difficulty
+- Input validation and clear error messages
+- Handles invalid usernames and network errors gracefully
+- Responsive design
 
 ## Tech Stack
 
-| Layer | Technology |
+| Technology | Purpose |
 | --- | --- |
-| Markup | HTML5 |
-| Styling | CSS3 (Flexbox, `conic-gradient`, CSS custom properties, media queries) |
-| Logic | JavaScript ES6+ (Fetch API, async/await, template literals) |
-| Data | LeetCode GraphQL API |
-| Networking | CORS proxy |
-| Hosting | GitHub Pages |
-
-## Architecture
-
-```
-User input
-    |
-    v
-Validation (regex)
-    |
-    v
-GraphQL query  --->  CORS proxy  --->  leetcode.com/graphql
-    |
-    v
-JSON response
-    |
-    v
-Data parsing  --->  Progress rings + Stat cards (DOM update)
-```
-
-## Technical Highlights
-
-- **GraphQL integration:** a single query fetches total question counts and the user's accepted and total submission statistics.
-- **Dynamic progress rings:** solved ratio is passed to CSS through a custom property (`--progress-degree`) and rendered with `conic-gradient`, with no charting library.
-- **Defensive data handling:** responses are checked for missing users before rendering, and error messages are shown without destroying the existing UI.
-- **Async flow control:** `try / catch / finally` with async/await manages loading state, errors and button reset.
-- **Zero dependencies:** built entirely with vanilla HTML, CSS and JavaScript.
-
-## Challenges and Solutions
-
-| Challenge | Solution |
-| --- | --- |
-| Browsers block direct requests to `leetcode.com/graphql` (CORS) | Routed requests through a CORS proxy |
-| Error handling overwrote the results section, breaking later searches | Moved errors into a dedicated message element so the stats DOM stays intact |
-| Non-existent usernames returned `null` and caused runtime errors | Added an explicit check before rendering |
-| Acceptance rate needed a safe calculation | Guarded against division by zero when a difficulty has no submissions |
+| HTML5 | Page structure |
+| CSS3 | Styling, Flexbox, conic-gradient progress rings |
+| JavaScript (ES6+) | Fetch API, async/await, DOM manipulation |
+| LeetCode GraphQL API | User statistics data |
+| CORS Proxy | Allows browser requests to LeetCode |
 
 ## Getting Started
 
 ### Prerequisites
 
-- A modern web browser
-- (Optional) VS Code with the Live Server extension
+- A modern web browser (Chrome, Edge, Firefox, Safari)
+- (Optional) [VS Code](https://code.visualstudio.com/) with the Live Server extension
 
 ### Installation
 
-```bash
-git clone https://github.com/pintu-kumarnitw/LeetAnalytics.git
-cd LeetAnalytics
-```
+1. Clone the repository
 
-Open `index.html` directly in a browser, or use **Open with Live Server** in VS Code.
+   ```bash
+   git clone https://github.com/pintu-kumarnitw/LeetAnalytics.git
+   ```
+
+2. Go to the project folder
+
+   ```bash
+   cd LeetAnalytics
+   ```
+
+3. Run the project
+
+   - Open `index.html` in VS Code, right-click and choose **Open with Live Server**, or
+   - Double-click `index.html` to open it in your browser.
 
 ## Proxy Setup
 
-LeetCode does not allow direct browser requests, so the app uses a CORS proxy. Enable it before using the app:
+LeetCode blocks direct browser requests (CORS), so the app sends requests through a CORS proxy. Enable it before using the app:
 
 1. Open [https://cors-anywhere.herokuapp.com/corsdemo](https://cors-anywhere.herokuapp.com/corsdemo)
 2. Click **Request temporary access to the demo server**
 3. Return to the app and search a username
 
-The access is temporary. If the app stops returning data, repeat the steps above. For a permanent setup, host your own proxy (for example a Cloudflare Worker) and update the proxy URL in `script.js`.
+> The access is temporary. If the app shows an error or no data, repeat the steps above.
+
+## Usage
+
+1. Enter a LeetCode username in the input box.
+2. Click **Search** (or press Enter).
+3. View your progress rings and submission stats.
 
 ## Project Structure
 
 ```
 LeetAnalytics/
-├── index.html      # Page structure
-├── style.css       # Layout, theme and progress rings
-├── script.js       # API requests, validation, rendering
-└── README.md
+├── index.html     # Markup
+├── style.css      # Styles
+├── script.js      # API calls and UI logic
+└── README.md      # Documentation
 ```
 
-## Future Improvements
+## How It Works
 
-- Self-hosted serverless proxy to remove the manual activation step
-- Contest rating and ranking
-- Recent submissions and topic-wise breakdown
-- Dark mode
+1. The username is validated using a regular expression.
+2. A GraphQL query is sent to `https://leetcode.com/graphql/` through the CORS proxy.
+3. The response is parsed to get solved counts and submission stats.
+4. The UI updates the progress rings and stat cards.
+
+## Roadmap
+
+- [x] Search by username
+- [x] Progress rings by difficulty
+- [x] Submission and acceptance stats
+- [ ] Contest rating
+- [ ] Recent submissions
+- [ ] Dark mode
+- [ ] Own backend proxy (no manual proxy activation)
+
+## Contributing
+
+Contributions are welcome.
+
+1. Fork the project
+2. Create your branch (`git checkout -b feature/NewFeature`)
+3. Commit your changes (`git commit -m "Add NewFeature"`)
+4. Push to the branch (`git push origin feature/NewFeature`)
+5. Open a Pull Request
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Author
 
 **Pintu Kumar**
-B.Tech, Electrical and Electronics Engineering, NIT Warangal
-GitHub: [@pintu-kumarnitw](https://github.com/pintu-kumarnitw)
+
+- GitHub: [@pintu-kumarnitw](https://github.com/pintu-kumarnitw)
+
+---
+
+<div align="center">
+
+If you like this project, give it a star.
+
+</div>
