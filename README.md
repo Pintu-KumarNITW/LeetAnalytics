@@ -49,8 +49,6 @@ LeetAnalytics fetches a user's data from the LeetCode GraphQL API and presents i
 
 ### 🚀 [Launch Live Demo →](https://pintu-kumarnitw.github.io/LeetAnalytics/)
 
-[![Launch LeetAnalytics](https://img.shields.io/badge/🌐_Launch_LeetAnalytics-pintu--kumarnitw.github.io-00b8a3?style=for-the-badge&logo=leetcode&logoColor=white
-
 ---
 
 ## Features
