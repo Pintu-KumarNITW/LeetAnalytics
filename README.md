@@ -14,6 +14,19 @@ A lightweight web app that turns any public LeetCode username into a clean dashb
 </div>
 
 ---
+## Table of Contents
+
+- [Description](#description)
+- [Live Demo](#live-demo)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [How It Works](#how-it-works)
+- [Roadmap](#roadmap)
+- [Author](#author)
+
+---
 
 ## Description
 
@@ -30,20 +43,6 @@ LeetAnalytics fetches a user's data from the LeetCode GraphQL API and presents i
 > The proxy is required because LeetCode blocks direct browser requests (CORS). The access is temporary, so repeat these steps if the app shows no data.
 
 ### [Open Live Demo](https://pintu-kumarnitw.github.io/LeetAnalytics/)
-
----
-
-## Table of Contents
-
-- [Description](#description)
-- [Live Demo](#live-demo)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Usage](#usage)
-- [Project Structure](#project-structure)
-- [How It Works](#how-it-works)
-- [Roadmap](#roadmap)
-- [Author](#author)
 
 ---
 
