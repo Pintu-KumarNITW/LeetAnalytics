@@ -6,8 +6,6 @@
 
 A lightweight web app that turns any public LeetCode username into a clean dashboard of solved problems, submission counts and acceptance rates.
 
-[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Open_App-2ea44f?style=for-the-badge&logo=githubpages&logoColor=white)](https://pintu-kumarnitw.github.io/LeetAnalytics/)
-[![Source Code](https://img.shields.io/badge/Source_Code-GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/pintu-kumarnitw/LeetAnalytics)
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
@@ -135,6 +133,5 @@ GitHub: [@pintu-kumarnitw](https://github.com/pintu-kumarnitw)
 
 <div align="center">
 
-⭐ If you like this project, give it a star!
 
 </div>
