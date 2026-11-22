@@ -3,7 +3,6 @@
 A responsive web application that visualizes a LeetCode user's problem-solving progress and submission statistics, built with vanilla JavaScript and the LeetCode GraphQL API.
 
 **Live Demo:** [https://pintu-kumarnitw.github.io/LeetAnalytics/](https://pintu-kumarnitw.github.io/LeetAnalytics/)
-**Source Code:** [https://github.com/pintu-kumarnitw/LeetAnalytics](https://github.com/pintu-kumarnitw/LeetAnalytics)
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
