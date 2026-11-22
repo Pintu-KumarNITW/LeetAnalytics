@@ -125,8 +125,6 @@ LeetAnalytics/
 
 **Pintu Kumar**  
 B.Tech, Electrical and Electronics Engineering, NIT Warangal  
-GitHub: [@pintu-kumarnitw](https://github.com/pintu-kumarnitw)
-
 ---
 
 <div align="center">
