@@ -50,12 +50,13 @@ LeetAnalytics fetches a user's data from the LeetCode GraphQL API and presents i
 ## Features
 
 - Search any public LeetCode profile by username
-- Circular progress rings for Easy, Medium and Hard problems (solved / total)
-- Submission stat cards: overall, easy, medium and hard submissions
-- Acceptance rate for each difficulty
-- Input validation and clear error messages
-- Handles invalid usernames and network errors gracefully
-- Responsive design
+- Circular progress indicators for Easy, Medium and Hard problems (solved / total)
+- Submission statistics: overall, easy, medium and hard submissions
+- Acceptance rate calculated for each difficulty level
+- Username validation using regular expressions
+- Graceful handling of invalid usernames, missing users and network failures
+- Loading state on the search button to prevent duplicate requests
+- Responsive layout for desktop and mobile
 
 ## Tech Stack
 
@@ -66,6 +67,23 @@ LeetAnalytics fetches a user's data from the LeetCode GraphQL API and presents i
 | JavaScript (ES6+) | Fetch API, async/await, DOM manipulation |
 | LeetCode GraphQL API | User statistics data |
 | CORS Proxy | Allows browser requests to LeetCode |
+
+## Architecture
+```
+User input
+    |
+    v
+Validation (regex)
+    |
+    v
+GraphQL query  --->  CORS proxy  --->  [leetcode.com/graphql](https://leetcode.com/graphql)
+    |
+    v
+JSON response
+    |
+    v
+Data parsing  --->  Progress rings + Stat cards (DOM update)
+```
 
 ## Usage
 
@@ -91,19 +109,17 @@ LeetAnalytics/
 3. The response is parsed to get solved counts and submission stats.
 4. The UI updates the progress rings and stat cards.
 
-## Roadmap
+## Future Improvements
 
-- [x] Search by username
-- [x] Progress rings by difficulty
-- [x] Submission and acceptance stats
-- [ ] Contest rating
-- [ ] Recent submissions
-- [ ] Dark mode
-- [ ] Own backend proxy (no manual proxy activation)
+- Self-hosted serverless proxy to remove the manual activation step
+- Contest rating and ranking
+- Recent submissions and topic-wise breakdown
+- Dark mode
 
 ## Author
 
 **Pintu Kumar**
+B.Tech, Electrical and Electronics Engineering, NIT Warangal
 
 - GitHub: [@pintu-kumarnitw](https://github.com/pintu-kumarnitw)
 
