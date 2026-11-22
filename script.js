@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded",function(){
             searchButtom.textContent ="searching...."
             searchButtom.disabled=true
             // statsContainer.style.setProperty{"display"}
-            statsContainer.style.visibility="none";
+            statsContainer.style.display = "block";
 
             // const response=await fetch(url)
             const proxyUrl='https://cors-anywhere.herokuapp.com/'
