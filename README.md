@@ -10,7 +10,7 @@ A lightweight web app that turns any public LeetCode username into a clean dashb
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![GraphQL](https://img.shields.io/badge/GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white)
+
 
 **🌐 Live URL:** [https://pintu-kumarnitw.github.io/LeetAnalytics/](https://pintu-kumarnitw.github.io/LeetAnalytics/)
 
@@ -49,7 +49,7 @@ LeetAnalytics fetches a user's data from the LeetCode GraphQL API and presents i
 
 ### 🚀 [Launch Live Demo →](https://pintu-kumarnitw.github.io/LeetAnalytics/)
 
-[![Launch LeetAnalytics](https://img.shields.io/badge/🌐_Launch_LeetAnalytics-pintu--kumarnitw.github.io-00b8a3?style=for-the-badge&logo=leetcode&logoColor=white)](https://pintu-kumarnitw.github.io/LeetAnalytics/)
+[![Launch LeetAnalytics](https://img.shields.io/badge/🌐_Launch_LeetAnalytics-pintu--kumarnitw.github.io-00b8a3?style=for-the-badge&logo=leetcode&logoColor=white
 
 ---
 
