@@ -9,11 +9,7 @@ document.addEventListener("DOMContentLoaded",function(){
     const mediumlevel=document.getElementById("medium-lebel")
     const hardlevel=document.getElementById("hard-lebel")
     const cardStatsContainer=document.querySelector(".stats-cards")
-    const messageEl=document.getElementById("message")
-
-    // Apna Cloudflare Worker URL yahan daalo
-    const PROXY_URL = "https://leetanalytics-proxy.YOUR-SUBDOMAIN.workers.dev"
-
+    
     //return true or false based on a regex
     function validateUsername(username){
         if(username.trim()===""){
@@ -31,9 +27,12 @@ document.addEventListener("DOMContentLoaded",function(){
         try{
             searchButtom.textContent ="searching...."
             searchButtom.disabled=true
-            messageEl.textContent=""
-            statsContainer.style.display="none";
+            // statsContainer.style.setProperty{"display"}
+            statsContainer.style.visibility="none";
 
+            // const response=await fetch(url)
+            const proxyUrl='https://cors-anywhere.herokuapp.com/'
+            const targetUrl='https://leetcode.com/graphql/';
             const myHeaders = new Headers();
             myHeaders.append("content-type", "application/json");
             const graphql = JSON.stringify({
@@ -66,23 +65,17 @@ document.addEventListener("DOMContentLoaded",function(){
                 body: graphql,
                 redirect: "follow"
             };
-            const response = await fetch(PROXY_URL, requestOptions);
+            const response = await fetch(proxyUrl + targetUrl, requestOptions);
             if(!response.ok){
                 throw new Error("Unable to fetch the user details")
             }
             const parsedata= await response.json()
             console.log("Logging data: ",parsedata)
-
-            if(!parsedata.data || !parsedata.data.matchedUser){
-                throw new Error("User not found")
-            }
-
             displayUserData(parsedata)
-            statsContainer.style.display="block";
         }
         catch(error){
-            console.error("Error caught:", error);
-            messageEl.textContent = error.message || "no data found"
+            console.error("Error caught:", error);   
+            statsContainer.innerHTML='<p>no data found</p>'
         }
         finally{
             searchButtom.textContent ="search"
