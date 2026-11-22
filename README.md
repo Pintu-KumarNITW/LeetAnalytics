@@ -4,50 +4,54 @@
 
 **Track your LeetCode progress at a glance.**
 
+A lightweight web app that turns any public LeetCode username into a clean dashboard of solved problems, submission counts and acceptance rates.
+
 [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge)](https://pintu-kumarnitw.github.io/LeetAnalytics/)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-[Live Demo](https://pintu-kumarnitw.github.io/LeetAnalytics/) · [Report Bug](https://github.com/pintu-kumarnitw/LeetAnalytics/issues) · [Request Feature](https://github.com/pintu-kumarnitw/LeetAnalytics/issues)
-
 </div>
+
+---
+
+## Description
+
+LeetAnalytics fetches a user's data from the LeetCode GraphQL API and presents it visually: circular progress rings for Easy, Medium and Hard problems, along with submission statistics and acceptance rates. Built with vanilla HTML, CSS and JavaScript, with no external libraries.
+
+## Live Demo
+
+> **Before opening the demo, set up the proxy first:**
+>
+> 1. Open **[Proxy Setup Link](https://cors-anywhere.herokuapp.com/corsdemo)**
+> 2. Click **"Request temporary access to the demo server"**
+> 3. Then open the demo and search a username
+>
+> The proxy is required because LeetCode blocks direct browser requests (CORS). The access is temporary, so repeat these steps if the app shows no data.
+
+### [Open Live Demo](https://pintu-kumarnitw.github.io/LeetAnalytics/)
 
 ---
 
 ## Table of Contents
 
-- [About the Project](#about-the-project)
+- [Description](#description)
 - [Live Demo](#live-demo)
 - [Features](#features)
 - [Tech Stack](#tech-stack)
-- [Getting Started](#getting-started)
-- [Proxy Setup](#proxy-setup)
 - [Usage](#usage)
 - [Project Structure](#project-structure)
 - [How It Works](#how-it-works)
 - [Roadmap](#roadmap)
-- [Contributing](#contributing)
-- [License](#license)
 - [Author](#author)
 
 ---
-
-## About the Project
-
-LeetAnalytics is a lightweight web app that shows a user's LeetCode progress. Enter any public LeetCode username to see solved questions by difficulty and detailed submission statistics, all in one clean dashboard.
-
-## Live Demo
-
-**https://pintu-kumarnitw.github.io/LeetAnalytics/**
-
-> **Note:** The app uses a CORS proxy. Before searching, enable it once (see [Proxy Setup](#proxy-setup)).
 
 ## Features
 
 - Search any public LeetCode profile by username
 - Circular progress rings for Easy, Medium and Hard problems (solved / total)
-- Submission stat cards: overall, easy, medium, hard submissions
+- Submission stat cards: overall, easy, medium and hard submissions
 - Acceptance rate for each difficulty
 - Input validation and clear error messages
 - Handles invalid usernames and network errors gracefully
@@ -63,47 +67,12 @@ LeetAnalytics is a lightweight web app that shows a user's LeetCode progress. En
 | LeetCode GraphQL API | User statistics data |
 | CORS Proxy | Allows browser requests to LeetCode |
 
-## Getting Started
-
-### Prerequisites
-
-- A modern web browser (Chrome, Edge, Firefox, Safari)
-- (Optional) [VS Code](https://code.visualstudio.com/) with the Live Server extension
-
-### Installation
-
-1. Clone the repository
-
-   ```bash
-   git clone https://github.com/pintu-kumarnitw/LeetAnalytics.git
-   ```
-
-2. Go to the project folder
-
-   ```bash
-   cd LeetAnalytics
-   ```
-
-3. Run the project
-
-   - Open `index.html` in VS Code, right-click and choose **Open with Live Server**, or
-   - Double-click `index.html` to open it in your browser.
-
-## Proxy Setup
-
-LeetCode blocks direct browser requests (CORS), so the app sends requests through a CORS proxy. Enable it before using the app:
-
-1. Open [https://cors-anywhere.herokuapp.com/corsdemo](https://cors-anywhere.herokuapp.com/corsdemo)
-2. Click **Request temporary access to the demo server**
-3. Return to the app and search a username
-
-> The access is temporary. If the app shows an error or no data, repeat the steps above.
-
 ## Usage
 
-1. Enter a LeetCode username in the input box.
-2. Click **Search** (or press Enter).
-3. View your progress rings and submission stats.
+1. Enable the proxy using the [Proxy Setup Link](https://cors-anywhere.herokuapp.com/corsdemo).
+2. Open the [live demo](https://pintu-kumarnitw.github.io/LeetAnalytics/).
+3. Enter a LeetCode username and click **Search**.
+4. View the progress rings and submission stats.
 
 ## Project Structure
 
@@ -131,20 +100,6 @@ LeetAnalytics/
 - [ ] Recent submissions
 - [ ] Dark mode
 - [ ] Own backend proxy (no manual proxy activation)
-
-## Contributing
-
-Contributions are welcome.
-
-1. Fork the project
-2. Create your branch (`git checkout -b feature/NewFeature`)
-3. Commit your changes (`git commit -m "Add NewFeature"`)
-4. Push to the branch (`git push origin feature/NewFeature`)
-5. Open a Pull Request
-
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Author
 
