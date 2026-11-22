@@ -1,29 +1,36 @@
 <div align="center">
 
-# LeetAnalytics
+# 📊 LeetAnalytics
 
 **Track your LeetCode progress at a glance.**
 
 A lightweight web app that turns any public LeetCode username into a clean dashboard of solved problems, submission counts and acceptance rates.
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge)](https://pintu-kumarnitw.github.io/LeetAnalytics/)
+[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Open_App-2ea44f?style=for-the-badge&logo=githubpages&logoColor=white)](https://pintu-kumarnitw.github.io/LeetAnalytics/)
+[![Source Code](https://img.shields.io/badge/Source_Code-GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/pintu-kumarnitw/LeetAnalytics)
+
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![GraphQL](https://img.shields.io/badge/GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white)
+
+**🌐 Live URL:** [https://pintu-kumarnitw.github.io/LeetAnalytics/](https://pintu-kumarnitw.github.io/LeetAnalytics/)
 
 </div>
 
 ---
+
 ## Table of Contents
 
 - [Description](#description)
 - [Live Demo](#live-demo)
 - [Features](#features)
 - [Tech Stack](#tech-stack)
+- [Architecture](#architecture)
 - [Usage](#usage)
 - [Project Structure](#project-structure)
 - [How It Works](#how-it-works)
-- [Roadmap](#roadmap)
+- [Future Improvements](#future-improvements)
 - [Author](#author)
 
 ---
@@ -34,15 +41,17 @@ LeetAnalytics fetches a user's data from the LeetCode GraphQL API and presents i
 
 ## Live Demo
 
-> **Before opening the demo, set up the proxy first:**
+> ⚠️ **Before opening the demo, activate the CORS proxy first:**
 >
-> 1. Open **[Proxy Setup Link](https://cors-anywhere.herokuapp.com/corsdemo)**
+> 1. Open **[🔗 Proxy Setup Link](https://cors-anywhere.herokuapp.com/corsdemo)**
 > 2. Click **"Request temporary access to the demo server"**
-> 3. Then open the demo and search a username
+> 3. Return and launch the live demo below to search any username
 >
-> The proxy is required because LeetCode blocks direct browser requests (CORS). The access is temporary, so repeat these steps if the app shows no data.
+> *Why?* LeetCode blocks direct cross-origin browser requests (`CORS`). Demo access is temporary, so repeat these steps if data stops loading.
 
-### [Open Live Demo](https://pintu-kumarnitw.github.io/LeetAnalytics/)
+### 🚀 [Launch Live Demo →](https://pintu-kumarnitw.github.io/LeetAnalytics/)
+
+[![Launch LeetAnalytics](https://img.shields.io/badge/🌐_Launch_LeetAnalytics-pintu--kumarnitw.github.io-00b8a3?style=for-the-badge&logo=leetcode&logoColor=white)](https://pintu-kumarnitw.github.io/LeetAnalytics/)
 
 ---
 
@@ -62,13 +71,14 @@ LeetAnalytics fetches a user's data from the LeetCode GraphQL API and presents i
 | Technology | Purpose |
 | --- | --- |
 | HTML5 | Page structure |
-| CSS3 | Styling, Flexbox, conic-gradient progress rings |
-| JavaScript (ES6+) | Fetch API, async/await, DOM manipulation |
+| CSS3 | Styling, Flexbox, `conic-gradient` progress rings |
+| JavaScript (ES6+) | Fetch API, `async/await`, DOM manipulation |
 | LeetCode GraphQL API | User statistics data |
 | CORS Proxy | Allows browser requests to LeetCode |
 
 ## Architecture
-```
+
+```text
 User input
     |
     v
@@ -86,14 +96,14 @@ Data parsing  --->  Progress rings + Stat cards (DOM update)
 
 ## Usage
 
-1. Enable the proxy using the [Proxy Setup Link](https://cors-anywhere.herokuapp.com/corsdemo).
-2. Open the [live demo](https://pintu-kumarnitw.github.io/LeetAnalytics/).
+1. Enable the proxy using the **[Proxy Setup Link](https://cors-anywhere.herokuapp.com/corsdemo)**.
+2. Open the **[Live Demo](https://pintu-kumarnitw.github.io/LeetAnalytics/)**.
 3. Enter a LeetCode username and click **Search**.
 4. View the progress rings and submission stats.
 
 ## Project Structure
 
-```
+```text
 LeetAnalytics/
 ├── index.html     # Markup
 ├── style.css      # Styles
@@ -117,15 +127,14 @@ LeetAnalytics/
 
 ## Author
 
-**Pintu Kumar**
-B.Tech, Electrical and Electronics Engineering, NIT Warangal
-
-- GitHub: [@pintu-kumarnitw](https://github.com/pintu-kumarnitw)
+**Pintu Kumar**  
+B.Tech, Electrical and Electronics Engineering, NIT Warangal  
+GitHub: [@pintu-kumarnitw](https://github.com/pintu-kumarnitw)
 
 ---
 
 <div align="center">
 
-If you like this project, give it a star.
+⭐ If you like this project, give it a star!
 
 </div>
